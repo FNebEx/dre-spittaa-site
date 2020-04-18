@@ -1,0 +1,52 @@
+---
+layout: default
+title: Home - Dre Spittaa
+---
+{% assign single = site.data.singles.last %}
+{% assign video = site.data.videos.last %}
+
+<!-- singles -->
+<section>
+    <h3>Latest Single - {{ single.title }}</h3>
+    <img src="{{single.cover}}" class="img-fluid">
+
+    <span>
+        <i class="fab fa-spotify fa-4x"></i>
+    </span>
+    <span>
+        <i class="fab fa-soundcloud fa-4x"></i>
+    </span>
+    <span>
+        <i class="fab fa-itunes fa-4x"></i>
+    </span>
+</section>
+
+<!-- Videos -->
+<section>
+    <h3>Latest Video - {{ video.title }}</h3>
+    <iframe width="100%" height="300" src="https://www.youtube.com/embed/{{video.id}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+
+<section>
+    <h3>More Releases</h3>
+    <div class="row">
+        {% for album in site.albums limit: 3 %}
+            <div class="col-lg-4">
+                <div class="card mb-3" style="width: 100%;">
+                    <img src="{{ album.cover}}" class="card-img-top img-fluid" alt="{{ album.title }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ album.title}}</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <!-- <a href="{{ album.url }}" class="card-link spittaa-red">{{ album.title }}</a> -->
+                        <a href="{{ album.soundcloud }}" class="card-link spittaa-red" target="_blank" class="card-link">Listen</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section>
+    <h3>Coming Soon</h3>
+    <h3>Dre Spittaa Merch</h3>
+</section>

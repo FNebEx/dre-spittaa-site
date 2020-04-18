@@ -1,0 +1,37 @@
+---
+layout: default
+title: Events - Dre Spittaa
+permalink: /events/
+---
+
+{% assign events = site.data.events %}
+
+<h1>Events</h1>
+
+{% if events %}
+    <!-- Loop through events -->
+{% else %}
+    <div>
+        <h3>No Upcoming Events 😭😭😭</h3>
+        <p>While you're waiting for a show, listen to some music.</p>
+    </div>
+{% endif %}
+<br>
+
+<div class="row">
+    {% for album in site.albums limit: 3 %}
+        <!-- {{ a.title }}
+        <a href="{{ a.url }}">sldfjl</a> -->
+        <div class="col-lg-4">
+            <div class="card mb-3" style="width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ album.title}}</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <!-- <a href="{{ album.url }}" class="card-link spittaa-red">{{ album.title }}</a> -->
+                    <a href="{{ album.soundcloud }}" class="card-link spittaa-red" target="_blank" class="card-link">Listen</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+</div>

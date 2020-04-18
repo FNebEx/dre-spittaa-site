@@ -1,0 +1,53 @@
+---
+layout: default
+title: Events - Dre Spittaa
+permalink: /music/
+---
+
+<h3>Albums, Mixtapes, and EP's</h3>
+<br>
+
+<section class="music">
+{% for album in site.albums %}
+    <a href="">
+        <h4 class="spittaa-red">{{ album.title }}</h4>
+    </a>
+    <div class="platforms">
+
+        <a href="{{ album.url }}">Read</a>
+        {% if album.soundcloud %}
+            <a href="">Soundcloud</a>
+        {% endif %}
+        {% if album.spotify %}
+            <a href="">Spotify</a>
+        {% endif %}
+        {% if album.appleMusic %}
+            <a href="">Apple Music</a>
+        {% endif %}
+    </div>
+    <hr>
+{% endfor %}
+</section>
+
+<h3>Singles</h3>
+<br>
+
+<section class="music">
+{% for single in site.data.singles %}
+    <a href="">
+        <h4 class="spittaa-red">{{ single.title }}</h4>
+    </a>
+    <div class="platforms">
+        {% if single.soundcloud %}
+            <a href="">Soundcloud</a>
+        {% endif %}
+        {% if single.spotify %}
+            <a href="">Spotify</a>
+        {% endif %}
+        {% if single.appleMusic %}
+            <a href="">Apple Music</a>
+        {% endif %}
+    </div>
+    <hr>
+{% endfor %}
+</section>
