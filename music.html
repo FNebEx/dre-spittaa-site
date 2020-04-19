@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Events - Dre Spittaa
+title: Music - Dre Spittaa
 permalink: /music/
 ---
 
@@ -8,46 +8,67 @@ permalink: /music/
 <br>
 
 <section class="music">
-{% for album in site.albums %}
-    <a href="">
-        <h4 class="spittaa-red">{{ album.title }}</h4>
-    </a>
-    <div class="platforms">
-
-        <a href="{{ album.url }}">Read</a>
-        {% if album.soundcloud %}
-            <a href="">Soundcloud</a>
-        {% endif %}
-        {% if album.spotify %}
-            <a href="">Spotify</a>
-        {% endif %}
-        {% if album.appleMusic %}
-            <a href="">Apple Music</a>
-        {% endif %}
+    <div class="row">
+        {% for album in site.albums %}
+            <div class="col-lg-3 mb-3">
+                <img src="{{ album.cover }}" alt="{{ album.title }}" class="img-fluid">
+                <h4>{{ album.title }}</h4>
+                {% if album.soundcloud %}
+                <p>
+                    <a href="{{ album.soundcloud }}" class="spittaa-red" target="_blank">Soundcloud</a>
+                </p>
+                {% endif %}
+                {% if album.spotify %}
+                <p>
+                    <a href="{{ album.spotify }}" class="spittaa-red" target="_blank">Spotify</a>
+                </p>
+                {% endif %}
+                {% if album.appleMusic %}
+                <p>
+                    <a href="{{ album.appleMusic }}" class="spittaa-red" target="_blank">Apple Music</a>
+                </p>
+                {% endif %}
+            </div>
+        {% endfor %}
     </div>
-    <hr>
-{% endfor %}
 </section>
 
 <h3>Singles</h3>
 <br>
 
 <section class="music">
-{% for single in site.data.singles %}
-    <a href="">
-        <h4 class="spittaa-red">{{ single.title }}</h4>
-    </a>
-    <div class="platforms">
-        {% if single.soundcloud %}
-            <a href="">Soundcloud</a>
-        {% endif %}
-        {% if single.spotify %}
-            <a href="">Spotify</a>
-        {% endif %}
-        {% if single.appleMusic %}
-            <a href="">Apple Music</a>
-        {% endif %}
+    <div class="row">
+        {% for single in site.data.singles reversed %}
+        <div class="col-lg-2 mb-">
+            <img src="{{ single.singleCover }}" alt="{{ single.title }}" class="img-fluid">
+            <h4>{{ single.title }}</h4>
+            {% if single.soundcloud %}
+            <p>
+                <a href="{{ single.soundcloud }}" class="spittaa-red" target="_blank">Soundcloud</a>
+            </p>
+            {% endif %}
+            {% if single.spotify %}
+            <p>
+                <a href="{{ single.spotify }}" class="spittaa-red" target="_blank">Spotify</a>
+            </p>
+            {% endif %}
+            {% if single.appleMusic %}
+            <p>
+                <a href="{{ single.appleMusic }}" class="spittaa-red" target="_blank">Apple Music</a>
+            </p>
+            {% endif %}
+        </div>
+        {% endfor %}
     </div>
-    <hr>
-{% endfor %}
+</section>
+
+<!-- Music Videos -->
+<section>
+    <div class="row">
+        {% for video in site.data.videos reversed %}
+            <div class="col-lg-6">
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/{{video.id}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        {% endfor %}
+    </div>
 </section>
