@@ -11,7 +11,9 @@ permalink: /music/
     <div class="row">
         {% for album in site.albums %}
             <div class="col-lg-3 mb-3">
-                <img src="{{ album.cover }}" alt="{{ album.title }}" class="img-fluid">
+                <a href="{{ album.url }}">
+                    <img src="{{ album.cover }}" alt="{{ album.title }}" class="img-fluid">
+                </a>
                 <h4>{{ album.title }}</h4>
                 {% if album.soundcloud %}
                 <p>
@@ -63,6 +65,8 @@ permalink: /music/
 </section>
 
 <!-- Music Videos -->
+<h3>Videos</h3>
+<br>
 <section>
     <div class="row">
         {% for video in site.data.videos reversed %}
