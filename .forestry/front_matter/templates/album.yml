@@ -27,5 +27,12 @@ fields:
   config:
     required: true
   label: Cover
+- name: tracklist
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Tracklist
 pages:
 - _albums/the-test-album.md
