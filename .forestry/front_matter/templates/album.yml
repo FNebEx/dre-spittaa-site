@@ -22,3 +22,5 @@ fields:
     schema:
       format: markdown
   label: Description
+pages:
+- _albums/the-test-album.md
