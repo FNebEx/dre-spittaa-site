@@ -5,7 +5,7 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: _data/singles.yaml
+  path: _data
   label: Singles
   create: all
   match: "**/*"
