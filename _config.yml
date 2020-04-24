@@ -21,9 +21,9 @@
 title: Your awesome title
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter: Dre_Spittaa
+twitter: dre_dpittaa
 instagram:  dre_spittaa
-email: Dre spittaa verse (at) website (dot) com
+email: dre spittaa verse (at) gmail (dot) com
 
 collections:
   albums:

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home - Dre Spittaa
+title: Home - 
 ---
 {% assign single = site.data.singles.last %}
 {% assign video = site.data.videos.last %}
@@ -11,7 +11,9 @@ title: Home - Dre Spittaa
     <!-- <img src="{{single.cover}}" class="img-fluid"> -->
     <iframe src="https://open.spotify.com/embed/track/2l2crZVgburoRhxx2nNk9S" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
-    <a href="/music/" class="btn btn-primary">View All Singles</a>
+    <div class="btn-wrapper">
+        <a href="/music/" class="btn btn-primary">View All Singles</a>
+    </div>
 </section>
 
 <!-- Videos -->
@@ -19,7 +21,9 @@ title: Home - Dre Spittaa
     <h3>Latest Video - {{ video.title }}</h3>
     <iframe width="100%" height="300" src="https://www.youtube.com/embed/{{video.id}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-    <a href="/music/" class="btn btn-primary">View Videos</a>
+    <div class="btn-wrapper">
+        <a href="/music/" class="btn btn-primary">View Videos</a>
+    </div>
 </section>
 
 <section>
@@ -40,10 +44,12 @@ title: Home - Dre Spittaa
         {% endfor %}
     </div>
 
-    <a href="/music/" class="btn btn-primary">View All Music</a>
+    <div class="btn-wrapper">
+        <a href="/music/" class="btn btn-primary">View All Music</a>
+    </div>
 </section>
 
-<section>
+<!-- <section>
     <h3>Coming Soon</h3>
     <h3>Dre Spittaa Merch</h3>
-</section>
+</section> -->
