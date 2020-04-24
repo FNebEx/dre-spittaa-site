@@ -34,5 +34,3 @@ fields:
     min: 
     max: 
   label: Tracklist
-pages:
-- _albums/the-test-album.md
