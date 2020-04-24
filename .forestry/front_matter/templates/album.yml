@@ -22,5 +22,10 @@ fields:
     schema:
       format: markdown
   label: Description
+- name: cover
+  type: text
+  config:
+    required: true
+  label: Cover
 pages:
 - _albums/the-test-album.md
