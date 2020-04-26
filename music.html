@@ -20,14 +20,22 @@ permalink: "/music/"
                     <a href="{{ album.soundcloud }}" class="spittaa-red" target="_blank">Soundcloud</a>
                 </p>
                 {% endif %}
+
                 {% if album.spotify %}
                 <p>
                     <a href="{{ album.spotify }}" class="spittaa-red" target="_blank">Spotify</a>
                 </p>
                 {% endif %}
+
                 {% if album.appleMusic %}
                 <p>
                     <a href="{{ album.appleMusic }}" class="spittaa-red" target="_blank">Apple Music</a>
+                </p>
+                {% endif %}
+
+                {% if album.tidal %}
+                <p>
+                    <a href="{{ album.tidal }}" class="spittaa-red" target="_blank">Tidal</a>
                 </p>
                 {% endif %}
             </div>
