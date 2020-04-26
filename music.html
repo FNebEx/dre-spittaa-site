@@ -67,6 +67,11 @@ permalink: "/music/"
                 <a href="{{ single.appleMusic }}" class="spittaa-red" target="_blank">Apple Music</a>
             </p>
             {% endif %}
+            {% if single.tidal %}
+            <p>
+                <a href="{{ single.tidal }}" class="spittaa-red" target="_blank">Tidal</a>
+            </p>
+            {% endif %}
         </div>
         {% endfor %}
     </div>
