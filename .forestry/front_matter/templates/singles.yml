@@ -1,4 +1,30 @@
 ---
 label: Singles
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+  description: 'The title of the song. '
+- name: singlecover
+  type: text
+  config:
+    required: false
+  label: Single Cover
+- name: soundcloud
+  type: text
+  config:
+    required: false
+  label: Soundcloud
+- name: spotify
+  type: text
+  config:
+    required: false
+  label: Spotify
+- name: appleMusic
+  type: text
+  config:
+    required: false
+  label: Apple Music
