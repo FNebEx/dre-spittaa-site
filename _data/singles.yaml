@@ -1,9 +1,9 @@
-<<<<<<< HEAD
 - title: R.I.P Record Theater
   singleCover: https://live.staticflickr.com/65535/49815018536_3202f29ecf_o.jpg
   soundcloud: "#"
+  appleMusic:
+  spotify:
   
-=======
 - title: It's a War
   singleCover: https://live.staticflickr.com/65535/49793275413_45a0e01221_o.jpg
   soundcloud: https://soundcloud.com/dre-spittaa-verse/its-a-war-prod-by-f-nebulous
@@ -18,7 +18,7 @@
   soundcloud: https://soundcloud.com/dre-spittaa-verse/mental-prod-by-secret-stash
   appleMusic: https://music.apple.com/us/album/mental-single/1491644640
   spotify: https://open.spotify.com/track/6NQy2WO6NKLdUE2daAlE2S?si=pheCw2wdQSuHrFNaVoDcdQ
->>>>>>> 182b7adb8a8da30cd40620a8c73d6ced5e89d01d
+
 - title: Take it Slow
   cover: https://live.staticflickr.com/65535/49788379748_8440f409de_o.jpg
   singleCover: https://live.staticflickr.com/65535/49794024292_be138892cc_o.jpg
