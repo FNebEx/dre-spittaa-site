@@ -4,6 +4,7 @@ singleID:
 title: Home - 
 ---
 {% assign single = site.data.singles.first %}
+{% assign previous_single = site.data.singles[1] %}
 {% assign video = site.data.videos.first %}
 
 <!-- singles -->
@@ -53,6 +54,42 @@ title: Home -
             </p>
         </div>
         {% endif %}
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <h3>Also listen to</h3>
+    <div class="previous">
+        <div class="single-cover">
+            <img src="{{ previous_single.singleCover }}" alt="">
+        </div>
+        <div class="previous-single-info">
+            <h5>{{ previous_single.title }}</h5>
+            {% if previous_single.soundcloud %}
+                <p>
+                    <a href="{{ previous_single.soundcloud }}" class="spittaa-red" target="_blank">Soundcloud</a>
+                </p>
+            {% endif %}
+    
+            {% if previous_single.spotify %}
+                <p>
+                    <a href="{{ previous_single.spotify }}" class="spittaa-red" target="_blank">Spotify</a>
+                </p>
+            {% endif %}
+     
+            {% if previous_single.appleMusic %}
+                <p>
+                    <a href="{{ previous_single.appleMusic }}" class="spittaa-red" target="_blank">Apple Music</a>
+                </p>
+            {% endif %}
+    
+            {% if previous_single.tidal %}
+                <p>
+                    <a href="{{ previous_single.tidal }}" class="spittaa-red" target="_blank">Tidal</a>
+                </p>
+            {% endif %}  
+        </div>
     </div>
 
     <div class="btn-wrapper">
