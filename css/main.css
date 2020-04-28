@@ -152,3 +152,33 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social-links div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-links div img{
+    width: 3rem;
+    height: 100%;
+}
+
+.social-links a {
+    margin: 0 10px;
+}
+
+@media (max-width: 576px) {
+    .social-links {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    } 
+}
