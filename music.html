@@ -9,7 +9,7 @@ permalink: "/music/"
 
 <section class="music">
     <div class="row">
-        {% for album in site.albums reversed %}
+        {% for album in site.albums %}
             <div class="col-lg-3 mb-3">
                 <a href="{{ album.url }}">
                     <img src="{{ album.cover }}" alt="{{ album.title }}" class="img-fluid">
