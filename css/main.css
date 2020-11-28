@@ -207,6 +207,12 @@ footer {
     margin-top: 20px;
 }
 
+.single-info {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+}
+
 @media (max-width: 576px) {
     .previous {
         display: flex;

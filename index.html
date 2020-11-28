@@ -3,7 +3,7 @@ layout: default
 singleID:
 title: Home - 
 ---
-{% assign single = site.data.singles.first %}
+<!-- {% assign single = site.data.singles.first %} -->
 {% assign previous_single = site.data.singles[1] %}
 {% assign video = site.data.videos.first %}
 
@@ -11,7 +11,10 @@ title: Home -
 <section>
     
     {% include LatestAlbum.html %}
-    <!-- {% include LatestSingle.html %} -->
+    <br>
+    <br>
+    <br>
+    {% include LatestSingle.html %}
 
     <br>
     <br>
