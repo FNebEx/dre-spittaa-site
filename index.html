@@ -9,50 +9,10 @@ title: Home -
 
 <!-- singles -->
 <section>
-    <h3>Latest Single - {{ single.title }}</h3>
-    <!-- <img src="{{single.cover}}" class="img-fluid"> -->
-
-    <!-- <iframe src="{{ single.spotify }}" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
-    <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="450" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/movie-feat-j-queezy-single/1530292238"></iframe>
     
-    <div class="social-links">
-        {% if single.soundcloud %}
-        <div>
-            <i class="fab fa-soundcloud fa-3x"></i>
-            <p>
-                <a href="{{ single.soundcloud }}" class="spittaa-red" target="_blank">Soundcloud</a>
-            </p>
-        </div>
-        {% endif %}
+    {% include LatestAlbum.html %}
+    <!-- {% include LatestSingle.html %} -->
 
-        {% if single.spotify %}
-        <div>
-            <i class="fab fa-spotify fa-3x"></i>
-            <p>
-                <a href="{{ single.spotify }}" class="spittaa-red" target="_blank">Spotify</a>
-            </p>
-        </div>
-        {% endif %}
-
-
-        {% if single.appleMusic %}
-        <div>
-            <i class="fab fa-itunes fa-3x"></i>
-            <p>
-                <a href="{{ single.appleMusic }}" class="spittaa-red" target="_blank">Apple Music</a>
-            </p>
-        </div>
-        {% endif %}
-
-        {% if single.tidal %}
-        <div>
-            <img src="./img/tidal.png" alt="">
-            <p>
-                <a href="{{ single.tidal }}" class="spittaa-red" target="_blank">Tidal</a>
-            </p>
-        </div>
-        {% endif %}
-    </div>
     <br>
     <br>
     <br>
@@ -116,7 +76,13 @@ title: Home -
                         <h5 class="card-title">{{ album.title}}</h5>
                         <p class="card-text">{{ album.description }}</p>
                         <!-- <a href="{{ album.url }}" class="card-link spittaa-red">{{ album.title }}</a> -->
+                        {% if album.soundcloud %}
+                            
                         <a href="{{ album.soundcloud }}" class="card-link spittaa-red" target="_blank" class="card-link">Listen</a>
+                        {% else %}
+                        <a href="{{ album.appleMusic }}" class="card-link spittaa-red" target="_blank" class="card-link">Listen</a>
+                        
+                        {% endif %}
                     </div>
                 </div>
             </div>
